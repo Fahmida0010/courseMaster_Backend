@@ -9,16 +9,6 @@ const transporter = nodemailer.createTransport({
     }
 });
 
-// Alternative: Use SMTP directly
-// const transporter = nodemailer.createTransport({
-//   host: process.env.SMTP_HOST,
-//   port: process.env.SMTP_PORT || 587,
-//   secure: false,
-//   auth: {
-//     user: process.env.EMAIL_USER,
-//     pass: process.env.EMAIL_PASSWORD
-//   }
-// });
 
 const sendWelcomeEmail = async (userEmail, userName) => {
     // Don't send email if email service is not configured
